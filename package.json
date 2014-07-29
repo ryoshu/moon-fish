@@ -1,0 +1,9 @@
+{ 
+  "name" : "moon-fish", 
+  "version" : "0.0.1", 
+  "dependencies" : { 
+    "galileo-io"    : "0.1.2",
+    "node-schedule" : "0.1.13",
+    "es6-promise"   : "1.0.0"
+  } 
+}
