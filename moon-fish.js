@@ -83,22 +83,22 @@ function parseMoonPhase(phaseText) {
 function setMoonPhase() {
   for(var i = 0; i < 6; ++i) {
     console.log("Turning off pixel " + i);
-    //client.setPixel(i, 0, 0, 0);
+    client.setPixel(i, 0, 0, 0);
   }
 
   for(var o in MOON_PHASES[mf.phase]) {
     console.log("Turning on pixel " + MOON_PHASES[mf.phase][o]);
-    //client.setPixel(o, 255, 255, 255);
+    client.setPixel(o, 255, 255, 255);
   }
 
-  //client.writePixels();
+  client.writePixels();
 }
 
 var mf = new MoonFish();
 checkMoonPhase(mf);
 
 var rule = new schedule.RecurrenceRule();
-rule.minute = 0;
+rule.second = 0;
 
 var job = schedule.scheduleJob(rule, function(){
   checkMoonPhase(mf);
