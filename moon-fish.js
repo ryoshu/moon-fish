@@ -3,8 +3,8 @@ const fs = require('fs'),
       Promise = require("es6-promise").Promise,
       Galileo = require("galileo-io"),
       schedule = require('node-schedule'),
-      client = new OPC('localhost', 7890),
-      OPC = new require('./opc');
+      OPC = new require('./opc'),
+      client = new OPC('localhost', 7890);
       
 
 /**
